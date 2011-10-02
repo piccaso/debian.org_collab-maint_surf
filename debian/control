@@ -1,0 +1,19 @@
+Source: surf
+Section: web
+Priority: optional
+Build-Depends: debhelper (>= 8), libgtk2.0-dev, libwebkit-dev
+Standards-Version: 3.9.1
+Maintainer: Kai Hendry <hendry@iki.fi>
+Homepage: http://surf.suckless.org
+Vcs-Browser: http://git.webconverger.org/?p=surf
+Vcs-Git: git://webconverger.org/git/public/surf
+
+Package: surf
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, suckless-tools, x11-utils, xterm, wget
+Provides: www-browser
+Description: simple web browser
+ surf is a simple web browser based on WebKit/GTK+. It is able to display
+ websites and follow links. It supports the XEmbed protocol which makes it
+ possible to embed it in another application. Furthermore, one can point surf to
+ another URI by setting its XProperties.
