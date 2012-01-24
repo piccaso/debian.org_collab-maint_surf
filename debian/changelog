@@ -4,8 +4,10 @@ surf (0.4.1-5) unstable; urgency=low
   * debian/control:
     + Bumped Standards-Version to 3.9.2
     + Vcs-* fields now point to collab-maint repository
+  * debian/watch:
+    + Introduced watch file
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 24 Jan 2012 22:54:09 +0530
+ --
 
 surf (0.4.1-4.1) unstable; urgency=low
 
