@@ -2,11 +2,11 @@ Source: surf
 Section: web
 Priority: optional
 Build-Depends: debhelper (>= 8), libgtk2.0-dev, libwebkit-dev
-Standards-Version: 3.9.1
-Maintainer: Kai Hendry <hendry@iki.fi>
+Standards-Version: 3.9.2
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Homepage: http://surf.suckless.org
-Vcs-Browser: http://git.webconverger.org/?p=surf
-Vcs-Git: git://webconverger.org/git/public/surf
+Vcs-Browser: git://anonscm.debian.org/collab-maint/surf.git
+Vcs-Git: http://anonscm.debian.org/gitweb/?p=collab-maint/surf.git;a=summary
 
 Package: surf
 Architecture: any
