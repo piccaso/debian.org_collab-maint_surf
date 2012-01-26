@@ -6,8 +6,13 @@ surf (0.4.1-5) unstable; urgency=low
     + Vcs-* fields now point to collab-maint repository
   * debian/watch:
     + Introduced watch file
+  * debian/surf.postinst:
+    + Reduced the update-alternative priority to 30 as per request from user
+      to the previous maintainer
+  * debian/rules:
+    + Introduced dpkg-buildflags by patching config.mk with dpkg-buildflags.patch
 
- --
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Thu, 26 Jan 2012 11:42:10 +0530
 
 surf (0.4.1-4.1) unstable; urgency=low
 
