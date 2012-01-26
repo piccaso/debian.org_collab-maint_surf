@@ -1,0 +1,21 @@
+Description: Changes to introducing dpkg-buildflags
+ This patch assists in introducing dpkg-buildflags in the rules
+ file.
+Author: Vasudev Kamath <kamathvasudev@gmail.com>
+Last-Updated: 26 Janaury 2012
+Forwaded: not-needed
+--- a/config.mk
++++ b/config.mk
+@@ -16,9 +16,9 @@
+ LIBS = -L/usr/lib -lc ${GTKLIB} -lgthread-2.0
+ 
+ # flags
+-CPPFLAGS = -DVERSION=\"${VERSION}\"
+-CFLAGS = -std=c99 -pedantic -Wall -Os ${INCS} ${CPPFLAGS}
+-LDFLAGS = -g ${LIBS}
++CPPFLAGS += -DVERSION=\"${VERSION}\"
++CFLAGS += -std=c99 -pedantic -Wall -Os ${INCS} ${CPPFLAGS}
++LDFLAGS += -g ${LIBS}
+ 
+ # Solaris
+ #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
