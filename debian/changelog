@@ -1,20 +1,22 @@
 surf (0.4.1-5) unstable; urgency=low
 
   * QA upload.
+  * Added Debian QA Group as maintainer for package.
   * debian/control:
-    + Bumped Standards-Version to 3.9.2
+    + Bumped Standards-Version to 3.9.2. This did not require any change to
+      the package source.
     + Vcs-* fields now point to collab-maint repository
+    + Added Build-Depends: on dpkg-dev (>= 1.16.1) to introduce dpkg-buildflags
   * debian/watch:
     + Introduced watch file
   * debian/surf.postinst:
-    + Reduced the update-alternative priority to 30 as per request from user
-      to the previous maintainer
+    + Reduced the update-alternative priority to 30 (Closes: #657646)
+  * Added patch to config.mk to make it honour {C,CPP,LD}FLAGS environment
+    variable
   * debian/rules:
-    + Introduced dpkg-buildflags by patching config.mk with dpkg-buildflags.patch
-  * debian/source/local-options:
-    + Introduced local-options to undo the patches
-
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Thu, 26 Jan 2012 12:28:03 +0530
+    + Export {C,CPP,LD} FLAGS environment variables for introducing
+      dpkg-buildflags
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Fri, 27 Jan 2012 23:22:17 +0530
 
 surf (0.4.1-4.1) unstable; urgency=low
 
