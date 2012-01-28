@@ -11,13 +11,15 @@ surf (0.4.1-5) unstable; urgency=low
     + Introduced watch file
   * debian/surf.postinst:
     + Reduced the update-alternative priority to 30 (Closes: #657646)
-  * Added patch to config.mk to make it honour {C,CPP,LD}FLAGS environment
-    variable
+  * debian/patches:
+    + Added dpkg-buildflags.patch to config.mk to make it honour {C,CPP,LD}FLAGS
+      environment variable
+    + Added DEP3 header to X11.diff
   * debian/rules:
     + Export {C,CPP,LD}FLAGS environment variables for introducing
       dpkg-buildflags
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 28 Jan 2012 09:18:37 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 28 Jan 2012 09:32:23 +0530
 
 surf (0.4.1-4.1) unstable; urgency=low
 
