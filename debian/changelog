@@ -14,9 +14,10 @@ surf (0.4.1-5) unstable; urgency=low
   * Added patch to config.mk to make it honour {C,CPP,LD}FLAGS environment
     variable
   * debian/rules:
-    + Export {C,CPP,LD} FLAGS environment variables for introducing
+    + Export {C,CPP,LD}FLAGS environment variables for introducing
       dpkg-buildflags
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Fri, 27 Jan 2012 23:22:17 +0530
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 28 Jan 2012 09:18:37 +0530
 
 surf (0.4.1-4.1) unstable; urgency=low
 
