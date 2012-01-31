@@ -7,6 +7,9 @@ surf (0.4.1-5) unstable; urgency=low
       the package source.
     + Vcs-* fields now point to collab-maint repository
     + Added Build-Depends: on dpkg-dev (>= 1.16.1) to introduce dpkg-buildflags
+    + In Build-Depends: renamed libwebkit-dev to libwebkitgtk-dev
+      (Closes: #635427)
+    + Added pkg-config to Build-Depends as config.mk is using it.
   * debian/watch:
     + Introduced watch file
   * debian/surf.postinst:
@@ -19,7 +22,7 @@ surf (0.4.1-5) unstable; urgency=low
     + Export {C,CPP,LD}FLAGS environment variables for introducing
       dpkg-buildflags
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 28 Jan 2012 09:32:23 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 31 Jan 2012 22:13:50 +0530
 
 surf (0.4.1-4.1) unstable; urgency=low
 
