@@ -1,4 +1,4 @@
-perm.patch
+fix-insecure-permissions.patch
 dpkg-buildflags.patch
 debian-changes-0.4.1-3
 X11.diff
