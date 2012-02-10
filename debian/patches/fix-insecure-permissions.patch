@@ -1,7 +1,7 @@
 Description: Fix for world readable cookie jar vulnerability
  This is the patch provided by upstream to fix the world readable
  cookie jar vulnerability filed as http://bugs.debian.org/659296.
- Thanks to Peter Hartman from the upstream for qucik patch.
+ Thanks to Peter Hartman from the upstream for quick patch.
 Author: Peter Hartman <peterjohnhartman@gmail.com>
 Last-Update: 2012-02-10
 Bug-Debian: http://bugs.debian.org/659296

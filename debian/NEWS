@@ -1,9 +1,10 @@
 surf (0.4.1-6) unstable; urgency=low
 
-  This release of surf fixes ~/.surf directory permission vulnerability.
-  If you are upgrading from a previous version of surf you should consider
-  manually changing permission of ~/.surf directory from 0755 to 0700 using
-  chmod. If this is a fresh install of surf you can ignore this message.
+  This release of surf fixes ~/.surf directory permission vulnerability
+  CVE-2012-0842 reported in #659296. If you are upgrading from a previous
+  version of surf you should consider manually changing permission of ~/.surf
+  directory from 0755 to 0700 using chmod. If this is a fresh install of surf
+  you can ignore this message.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Fri, 10 Feb 2012 23:25:26 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Fri, 10 Feb 2012 23:43:16 +0530
 
