@@ -1,3 +1,12 @@
+surf (0.4.1-6) unstable; urgency=low
+
+  * QA upload.
+  * debian/patches:
+    + Added perm.patch to fix world readable cookie jar vulnerability
+      (Closes: #659296)
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Fri, 10 Feb 2012 22:53:29 +0530
+
 surf (0.4.1-5) unstable; urgency=low
 
   * QA upload.
