@@ -1,10 +1,12 @@
-surf (0.4.1-6) unstable; urgency=low
+surf (0.4.1-6) unstable; urgency=high
 
   This release of surf fixes ~/.surf directory permission vulnerability
   CVE-2012-0842 reported in #659296. If you are upgrading from a previous
-  version of surf you should consider manually changing permission of ~/.surf
-  directory from 0755 to 0700 using chmod. If this is a fresh install of surf
+  version of surf you should manually change the permission of ~/.surf
+  directory from 0755 to 0700 and permission for files inside ~/.surf
+  directory from 0644 to 0600 using chmod, if you fail to do so other
+  local users can steal your cookies. If this is a fresh install of surf
   you can ignore this message.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Fri, 10 Feb 2012 23:43:16 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 11 Feb 2012 00:23:30 +0530
 
