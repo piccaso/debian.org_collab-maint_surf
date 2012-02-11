@@ -1,3 +1,19 @@
+surf (0.4.1-7) unstable; urgency=low
+
+  * New Maintainer (Closes: #647091)
+  * debian/control:
+    + Added myself as maintainer of package.
+  * debian/patches:
+    + Added surf_0.4.1_mkdir_fix.patch provided by Anslem Grabe to fix the
+      ~/.surf directory permission even if the directory already exists also
+      patch makes the cookies.txt only user readable.
+    + Removed fix-insecure-permission.patch as the new patch contains the all
+      the changes which was there in this patch.
+  * debian/NEWS:
+    + Updated NEWS file for the new version changes
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 11 Feb 2012 23:22:06 +0530
+
 surf (0.4.1-6) unstable; urgency=high
 
   * QA upload.
