@@ -4,7 +4,7 @@ surf (0.4.1-6) unstable; urgency=high
   CVE-2012-0842 reported in #659296. If you are upgrading from a previous
   version of surf you should manually change the permission of ~/.surf
   directory from 0755 to 0700 and permission for files inside ~/.surf
-  directory from 0644 to 0600 using chmod, if you fail to do so other
+  directory from 0644 to 0600 using chmod. If you fail to do so other
   local users can steal your cookies. If this is a fresh install of surf
   you can ignore this message.
 

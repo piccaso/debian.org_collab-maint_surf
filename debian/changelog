@@ -2,8 +2,8 @@ surf (0.4.1-6) unstable; urgency=high
 
   * QA upload.
   * debian/patches:
-    + Added perm.patch to fix world readable cookie jar vulnerability
-      CVE-2012-0842. (Closes: #659296)
+    + Added fix-insecure-permissions.patch to fix world readable cookie jar
+      vulnerability CVE-2012-0842. (Closes: #659296)
 
  -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 11 Feb 2012 00:01:08 +0530
 
