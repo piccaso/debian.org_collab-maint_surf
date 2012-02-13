@@ -9,5 +9,10 @@ export CPPFLAGS CFLAGS LDFLAGS
 %:
 	dh ${@}
 
+override_dh_clean:
+	rm -rf config.h
+	dh_clean
+
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$(CURDIR)/debian/surf PREFIX=/usr install
+
