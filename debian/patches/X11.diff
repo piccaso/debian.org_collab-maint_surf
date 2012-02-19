@@ -10,8 +10,8 @@ Bug-Debian: http://bugs.debian.org/615780
  
  surf: ${OBJ}
  	@echo CC -o $@
--	@${CC} -o $@ surf.o ${LDFLAGS}
-+	@${CC} -o $@ surf.o ${LDFLAGS} -lX11
+-	${CC} -o $@ surf.o ${LDFLAGS}
++	${CC} -o $@ surf.o ${LDFLAGS} -lX11
  
  clean:
  	@echo cleaning
