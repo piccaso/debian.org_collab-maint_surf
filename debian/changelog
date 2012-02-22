@@ -17,7 +17,7 @@ surf (0.4.1-7) unstable; urgency=low
     + Modified X11.diff patch to allow clean application of
       transparent_makefile.patch
   * debian/rules:
-    + Overrode the dh_clean to remove config.h created by Makefile during build
+    + Overrode dh_clean to remove config.h created by Makefile during build
 
  -- Vasudev Kamath <kamathvasudev@gmail.com>  Wed, 22 Feb 2012 22:42:59 +0530
 
