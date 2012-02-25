@@ -1,6 +1,6 @@
-Description: Commands in Maekefile should be visible while execution
+Description: Commands in Makefile should be visible while execution
  This patch removes @ from the Makefile so that command execution is
- visible to every one when DH_VERBOSE=1
+ visible to every one.
 Author: Vasudev Kamath <kamathvasudev@gmail.com>
 Last-Update: 2012-02-22
 Forwarded: not-needed
