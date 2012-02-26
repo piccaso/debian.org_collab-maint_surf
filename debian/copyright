@@ -1,3 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0
+Upstream: Surf
+Source: http://surf.suckless.org
+
 Files: *
 Copyright: (C) 2009-2010 Enno Boland <g@s01.de>
 License: MIT
@@ -20,8 +24,9 @@ License: MIT
  DEALINGS IN THE SOFTWARE.
 
 Files: debian/*
-Copyright: (C) 2010 Kai Hendry <hendry@iki.fi>
-Copyright: (C) 2009-2010 Daniel Baumann <daniel@debian.org>
+Copyright: (C) 2012 Vasudev Kamath <kamathvasudev@gmail.com>,
+           (C) 2010 Kai Hendry <hendry@iki.fi>,
+           (C) 2009-2010 Daniel Baumann <daniel@debian.org>,
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the "Software"),
