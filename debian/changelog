@@ -1,3 +1,11 @@
+surf (0.4.1-8) unstable; urgency=low
+
+  * debian/copyright:
+    + Added DEP5 header
+    + Added myself to the copyright holders of debian directory   
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 26 Feb 2012 19:51:14 +0530
+
 surf (0.4.1-7) unstable; urgency=low
 
   * New Maintainer (Closes: #647091)
@@ -18,9 +26,6 @@ surf (0.4.1-7) unstable; urgency=low
       transparent_makefile.patch
   * debian/rules:
     + Overrode dh_clean to remove config.h created by Makefile during build
-  * debian/copyright:
-    + Added DEP5 header
-    + Added myself to the copyright holders of debian directory
 
  -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 26 Feb 2012 19:29:27 +0530
 
