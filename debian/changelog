@@ -1,10 +1,14 @@
 surf (0.4.1-8) unstable; urgency=low
 
   * debian/copyright:
-    + Added DEP5 header
+    + Format URI now confirms Debian copyright-format 1.0
     + Added myself to the copyright holders of debian directory   
+  * debian/control
+    + Increased minimum version of debhelper required to 9
+    + Bumped Standards-Version to 3.9.3. This did not require any
+      changes to package source.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 26 Feb 2012 19:51:14 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 17 Jun 2012 20:39:35 +0530
 
 surf (0.4.1-7) unstable; urgency=low
 
