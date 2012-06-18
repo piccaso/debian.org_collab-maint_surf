@@ -31,7 +31,7 @@ surf (0.4.1-7) unstable; urgency=low
   * debian/rules:
     + Overrode dh_clean to remove config.h created by Makefile during build
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 26 Feb 2012 19:29:27 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Wed, 22 Feb 2012 22:42:59 +0530
 
 surf (0.4.1-6) unstable; urgency=high
 
