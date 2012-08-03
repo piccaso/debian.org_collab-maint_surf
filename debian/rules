@@ -2,9 +2,6 @@
 
 #export DH_VERBOSE=1
 
-include /usr/share/dpkg/buildflags.mk
-export CPPFLAGS CFLAGS LDFLAGS
-
 
 %:
 	dh ${@}

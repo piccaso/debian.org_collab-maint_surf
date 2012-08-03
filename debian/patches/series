@@ -1,4 +1,2 @@
 transparent_makefile.patch
-surf_0.4.1_mkdir_fix.patch
 dpkg-buildflags.patch
-X11.diff

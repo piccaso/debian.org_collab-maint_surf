@@ -1,3 +1,20 @@
+surf (0.5-1) unstable; urgency=low
+
+  * Imported Upstream version 0.5
+  * debian/patches:
+    + Deleted X11.diff from series file as it is merged in the upstrea
+    + Deleted surf_0.4.1_mkdir_fix.patch as the changes done by this patch
+      are merged in upstream
+    + Refreshed the dpkg-buildflags.patch as there was a modification in
+      upstream supplied config.mk
+  * debian/rules:
+    + Removed lines which was including /usr/share/dpkg/buildflags.mk and
+      exporting CPPFLAGS CFLAGS and LDFLAGS. Since package is using compat
+      level 9 this should be done automatically by debhelper
+  * Set debian/compat version to 9
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Fri, 03 Aug 2012 22:48:42 +0530
+
 surf (0.4.1-8) unstable; urgency=low
 
   * debian/copyright:
