@@ -1,4 +1,4 @@
-surf (0.5-1) unstable; urgency=low
+surf (0.5-1) experimental; urgency=low
 
   * Imported Upstream version 0.5
   * debian/patches:
@@ -13,7 +13,7 @@ surf (0.5-1) unstable; urgency=low
       level 9 this should be done automatically by debhelper
   * Set debian/compat version to 9
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Fri, 03 Aug 2012 22:48:42 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sat, 04 Aug 2012 11:55:04 +0530
 
 surf (0.4.1-8) unstable; urgency=low
 
