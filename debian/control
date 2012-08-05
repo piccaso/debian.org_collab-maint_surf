@@ -10,7 +10,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/surf.git;a=summary
 
 Package: surf
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, suckless-tools, x11-utils, x-terminal-emulator, wget
+Depends: ${misc:Depends}, ${shlibs:Depends}, suckless-tools, x11-utils, xterm|x-terminal-emulator, wget
 Provides: www-browser
 Description: simple web browser
  surf is a simple web browser based on WebKit/GTK+. It is able to display

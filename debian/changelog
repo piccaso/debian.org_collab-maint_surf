@@ -16,9 +16,10 @@ surf (0.5-1) experimental; urgency=low
     + Added information on how SSL certificate verification success or failure
       is indicated by this new release.
   * debian/control:
-    + Package now depends on x-terminal-emulator instead of xterm (Closes: #683851)
+    + Package now depends on xterm | x-terminal-emulator instead of only xterm
+      (Closes: #683851)
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 05 Aug 2012 20:45:11 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 05 Aug 2012 22:04:28 +0530
 
 surf (0.4.1-8) unstable; urgency=low
 
