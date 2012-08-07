@@ -1,0 +1,21 @@
+Description: Replace xterm call with x-terminal-emulator
+ This patch replaces xterm with x-terminal-emulator which
+ is a virtual package provided by most terminals in Debian
+ that have a common interface
+ .
+Author: Vasudev Kamath <kamathvasudev@gmail.com>
+Bug-Debian: http://bugs.debian.org/683851
+Forwarded: not-needed
+Last-Update: 2012-08-07
+
+--- surf-0.5.orig/config.def.h
++++ surf-0.5/config.def.h
+@@ -18,7 +18,7 @@ static char *strictssl      = FALSE; /*
+ 	p, q, winid, NULL } }
+ #define DOWNLOAD(d) {			  \
+ 	.v = (char *[]){ "/bin/sh", "-c", \
+-	"xterm -e \"wget '$0' \
++	"x-terminal-emulator -e \"wget '$0' \
+ --load-cookies ~/.surf/cookies.txt \
+ --user-agent '$1' ; sleep 5\"", d, useragent, NULL } }
+ #define MODKEY GDK_CONTROL_MASK

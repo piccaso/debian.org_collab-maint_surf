@@ -1,2 +1,3 @@
 transparent_makefile.patch
 dpkg-buildflags.patch
+replace_xterm_with_x-terminal-emulator.patch

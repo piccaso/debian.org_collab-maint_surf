@@ -14,12 +14,12 @@ surf (0.5-1) experimental; urgency=low
   * Set debian/compat version to 9
   * debian/NEWS:
     + Added information on how SSL certificate verification success or failure
-      is indicated by this new release.
+      is indicated by this new release (Closes: #684173).
   * debian/control:
     + Package now depends on xterm | x-terminal-emulator instead of only xterm
       (Closes: #683851)
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 05 Aug 2012 22:04:28 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 07 Aug 2012 20:08:16 +0530
 
 surf (0.4.1-8) unstable; urgency=low
 

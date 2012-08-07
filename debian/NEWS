@@ -1,11 +1,10 @@
 surf (0.5-1) experimental; urgency=low
 
   This release of Surf comes with SSL certificate verification which was not
-  present in previous release i.e. 0.4.1. If SSL certificate verification is
-  successful the progress bar will be blue, on failure the progress bar will
-  become RED.
+  present in previous releases. If SSL certificate verification is successful
+  the progress bar will be blue, on failure the progress bar will become RED.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 05 Aug 2012 22:04:42 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 07 Aug 2012 20:13:17 +0530
 
 surf (0.4.1-6) unstable; urgency=high
 
