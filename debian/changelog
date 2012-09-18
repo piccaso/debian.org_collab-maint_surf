@@ -21,9 +21,9 @@ surf (0.5-1) experimental; urgency=low
     + Package now depends on xterm | x-terminal-emulator instead of only xterm
       (Closes: #683851)
   * Removed debian/source/options file as the compression-level=9 and
-    compression=gzip is now default options
+    compression=gzip are currently default options
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 18 Sep 2012 11:17:55 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 18 Sep 2012 19:42:37 +0530
 
 surf (0.4.1-8) unstable; urgency=low
 
