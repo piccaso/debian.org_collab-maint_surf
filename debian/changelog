@@ -7,6 +7,8 @@ surf (0.5-1) experimental; urgency=low
       are merged in upstream
     + Refreshed the dpkg-buildflags.patch as there was a modification in
       upstream supplied config.mk
+    + Added replace_xterm_with_x-terminal-emulator.patch to replace xterm
+      with x-terminal-emulator command.
   * debian/rules:
     + Removed lines which was including /usr/share/dpkg/buildflags.mk and
       exporting CPPFLAGS CFLAGS and LDFLAGS. Since package is using compat
@@ -19,7 +21,7 @@ surf (0.5-1) experimental; urgency=low
     + Package now depends on xterm | x-terminal-emulator instead of only xterm
       (Closes: #683851)
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 07 Aug 2012 20:08:16 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 18 Sep 2012 11:10:03 +0530
 
 surf (0.4.1-8) unstable; urgency=low
 
