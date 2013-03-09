@@ -6,7 +6,7 @@ Standards-Version: 3.9.4
 Maintainer: Vasudev Kamath <kamathvasudev@gmail.com>
 Homepage: http://surf.suckless.org
 Vcs-Git: git://anonscm.debian.org/collab-maint/surf.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/surf.git;a=summary
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/surf.git
 
 Package: surf
 Architecture: any
