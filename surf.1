@@ -3,12 +3,12 @@
 surf \- simple webkit-based browser
 .SH SYNOPSIS
 .B surf
+.RB [-ipnsvx]
+.RB [-c\ cookiefile]
 .RB [-e\ xid]
-.RB [-i]
-.RB [-p]
-.RB [-s]
-.RB [-v]
-.RB [-x]
+.RB [-r\ scriptfile]
+.RB [-t\ stylefile]
+.RB [-u\ useragent]
 .RB "URI"
 .SH DESCRIPTION
 surf is a simple Web browser based on WebKit/GTK+. It is able
@@ -17,17 +17,32 @@ which makes it possible to embed it in another application. Furthermore,
 one can point surf to another URI by setting its XProperties.
 .SH OPTIONS
 .TP
+.B \-c cookiefile 
+Specify the cookiefile to use.
+.TP
 .B \-e xid
 Reparents to window specified by xid.
 .TP
 .B \-i
 Disable Images
 .TP
+.B \-n
+Disable the Web Inspector (Developer Tools).
+.TP
 .B \-p
 Disable Plugins
 .TP
+.B \-r scriptfile 
+Specify the user scriptfile.
+.TP
 .B \-s
 Disable Javascript
+.TP
+.B \-t stylefile
+Specify the user stylefile.
+.TP
+.B \-u useragent 
+Specify the useragent which surf should use.
 .TP
 .B \-v
 Prints version information to standard output, then exits.
@@ -51,16 +66,34 @@ Scrolls page upwards.
 .B Ctrl\-j
 Scrolls page downwards.
 .TP
-.B Ctrl\-Shift\-k
+.B Ctrl\-b
+Scroll up one whole page view.
+.TP
+.B Ctrl\-Space
+Scroll down one whole page view.
+.TP
+.B Ctrl\-i
+Scroll horizontally to the right.
+.TP
+.B Ctrl\-u
+Scroll horizontally to the left.
+.TP
+.B Ctrl\-Shift\-k or Ctrl\-+
 Zooms page in.
 .TP
-.B Ctrl\-Shift\-j
+.B Ctrl\-Shift\-j or Ctrl\--
 Zooms page out
 .TP
-.B Ctrl\-Shift\-i
+.B Ctrl\-Shift\-q
 Resets Zoom
 .TP
-.B Ctrl\-f
+.B Ctrl\-h
+Navigate back one step in history.
+.TP
+.B Ctrl\-l
+Navigate forward one step in history.
+.TP
+.B Ctrl\-f and Ctrl\-\\
 Opens the search-bar.
 .TP
 .B Ctrl\-n
@@ -75,6 +108,9 @@ Opens the URL-bar.
 .B Ctrl\-p
 Loads URI from primary selection.
 .TP
+.B Esc
+Stop loading the page.
+.TP
 .B Ctrl\-Shift\-p
 Calls Printpage Dialog.
 .TP
@@ -88,17 +124,46 @@ Reloads the website without using cache.
 Copies current URI to primary selection.
 .TP
 .B Ctrl\-o
-show the sourcecode of the current page.
-.SH ENVIRONMENT
+Show the sourcecode of the current page.
 .TP
+.B Ctrl\-Shift\-o
+Open the Web Inspector (Developer Tools) window for the current page.
+.TP
+.B Ctrl\-Shift\-c
+Toggle caret browsing.
+.TP
+.B Ctrl\-Shift\-i
+Toggle auto-loading of images.
+.TP
+.B Ctrl\-Shift\-s
+Toggle script execution.
+.TP
+.B Ctrl\-Shift\-v
+Toggle the enabling of plugins on that surf instance.
+.TP
+.B F11
+Toggle fullscreen mode.
+.SH ENVIRONMENT
 .B SURF_USERAGENT
 If this variable is set upon startup, surf will use it as the useragent string
 .TP
 .B http_proxy
 If this variable is set and not empty upon startup, surf will use it as the http proxy
+.SH PLUGINS
+For using plugins in surf, first determine your running architecture. Then get
+the appropriate plugin for that architecture and copy it to
+.BR /usr/lib/browser-plugins
+or
+.BR /usr/lib64/browser-plugins.
+Surf should load them automatically.
+.BR
+If you want to use a 32bit plugin on a 64bit system,
+.BR nspluginwrapper(1)
+will help you.
 .SH SEE ALSO
 .BR dmenu(1),
 .BR xprop(1),
-.BR tabbed(1)
+.BR tabbed(1),
+.BR nspluginwrapper(1)
 .SH BUGS
 Please report them!
