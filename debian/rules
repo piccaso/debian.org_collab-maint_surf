@@ -1,15 +1,19 @@
 #!/usr/bin/make -f
 
 #export DH_VERBOSE=1
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/upstream-tarball.mk
+include /usr/share/cdbs/1/rules/utils.mk
 
+# Class for handling plain make
+include /usr/share/cdbs/1/class/makefile.mk
 
-%:
-	dh ${@}
+pkg = surf
 
-override_dh_clean:
+CDBS_BUILD_DEPENDS += , libgtk2.0-dev, libwebkitgtk-dev, pkg-config
+CDBS_DEPENDS_$(pkg) += , suckless-tools, x11-utils, stterm, curl
+
+clean::
 	rm -rf config.h
-	dh_clean
 
-override_dh_auto_install:
-	$(MAKE) DESTDIR=$(CURDIR)/debian/surf PREFIX=/usr install
 
