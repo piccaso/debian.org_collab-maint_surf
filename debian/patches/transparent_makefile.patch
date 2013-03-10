@@ -6,7 +6,7 @@ Last-Update: 2012-02-22
 Forwarded: not-needed
 --- a/Makefile
 +++ b/Makefile
-@@ -16,45 +16,45 @@
+@@ -16,46 +16,46 @@ options:
  
  .c.o:
  	@echo CC $<
@@ -36,6 +36,7 @@ Forwarded: not-needed
 -	@cp -R LICENSE Makefile config.mk config.def.h README \
 +	mkdir -p surf-${VERSION}
 +	cp -R LICENSE Makefile config.mk config.def.h README \
+ 		surf-open.sh arg.h TODO.md surf.png \
  		surf.1 ${SRC} surf-${VERSION}
 -	@tar -cf surf-${VERSION}.tar surf-${VERSION}
 -	@gzip surf-${VERSION}.tar
