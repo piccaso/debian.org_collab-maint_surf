@@ -1,21 +1,20 @@
-Description: Replace xterm call with x-terminal-emulator
- This patch replaces xterm with x-terminal-emulator which
- is a virtual package provided by most terminals in Debian
- that have a common interface
+Description: Replace st call with stterm
+ This patch replaces st with stterm which is the name
+ for st binary on Debian system.
  .
 Author: Vasudev Kamath <kamathvasudev@gmail.com>
 Bug-Debian: http://bugs.debian.org/683851
 Forwarded: not-needed
-Last-Update: 2012-08-07
+Last-Update: 2013-03-10
 
 --- a/config.def.h
 +++ b/config.def.h
-@@ -18,7 +18,7 @@ static char *strictssl      = FALSE; /*
- 	p, q, winid, NULL } }
- #define DOWNLOAD(d) {			  \
+@@ -35,7 +35,7 @@ static Bool hidebackground  = FALSE;
+ /* DOWNLOAD(URI, referer) */
+ #define DOWNLOAD(d, r) { \
  	.v = (char *[]){ "/bin/sh", "-c", \
--	"xterm -e \"wget '$0' \
-+	"x-terminal-emulator -e sh -c \"wget '$0' \
- --load-cookies ~/.surf/cookies.txt \
- --user-agent '$1' ; sleep 5\"", d, useragent, NULL } }
- #define MODKEY GDK_CONTROL_MASK
+-		"st -e /bin/sh -c \"curl -J -O --user-agent '$1'" \
++		"stterm -e /bin/sh -c \"curl -J -O --user-agent '$1'" \
+ 		" --referer '$2'" \
+ 		" -b ~/.surf/cookies.txt -c ~/.surf/cookies.txt '$0';" \
+ 		" sleep 5;\"", \
