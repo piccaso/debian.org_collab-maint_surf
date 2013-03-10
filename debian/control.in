@@ -1,0 +1,19 @@
+Source: surf
+Section: web
+Priority: optional
+Build-Depends: @cdbs@
+Standards-Version: 3.9.4
+Maintainer: Vasudev Kamath <kamathvasudev@gmail.com>
+Homepage: http://surf.suckless.org
+Vcs-Git: git://anonscm.debian.org/collab-maint/surf.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/surf.git
+
+Package: surf
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, ${cdbs:Depends}
+Provides: www-browser
+Description: Simple web browser by suckless community
+ surf is a simple web browser based on WebKit/GTK+. It is able to display
+ websites and follow links. It supports the XEmbed protocol which makes it
+ possible to embed it in another application. Furthermore, one can point surf to
+ another URI by setting its XProperties.
