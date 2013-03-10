@@ -1,3 +1,20 @@
+surf (0.6-1) UNRELEASED; urgency=low
+
+  * Imported new upstream release 0.6.
+  * Introduced debian/control.in
+    + Moved build-depends to rules file
+    + Moved depends to rules file and removed x-terminal-emulator and wget
+      from depends, upstream now uses curl and stterm which is now
+      introduced as Depends.
+    + Bumped Standards-Version to 3.9.4 (no changes needed).
+    + Removed ;a=summary from the URL in Vcs-Browser field.
+    + Improved short description of package.
+  * Converted to CDBS packaging.
+  * Updated copyright holders for upstream source.
+  * Introduced debian/copyright_hints.
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 10 Mar 2013 16:58:37 +0530
+
 surf (0.5-1) experimental; urgency=low
 
   * Imported Upstream version 0.5
