@@ -3,7 +3,9 @@ Upstream-Name: Surf
 Source: http://surf.suckless.org
 
 Files: *
-Copyright: (C) 2009-2010 Enno Boland <g@s01.de>
+Copyright: (C) 2009-2011 Enno Boland <g@s01.de>
+  (c) 2011-2012, Troels Henriksen <athas@sigkill.at>
+  (c) 2012, Christoph Lohmann <20h@r-36.net>
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the "Software"),
