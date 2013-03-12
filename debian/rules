@@ -10,9 +10,21 @@ include /usr/share/cdbs/1/class/makefile.mk
 
 pkg = surf
 
+# get-orig-source target
+DEB_UPSTREAM_URL = http://dl.suckless.org/surf
+DEB_UPSTREAM_TARBALL_MD5 = aeeed723b562a30cc6a2b3ea18f6d99a
+
+# Build Depends and Depends
 CDBS_BUILD_DEPENDS += , libgtk2.0-dev, libwebkitgtk-dev, pkg-config
 CDBS_DEPENDS_$(pkg) += , suckless-tools, x11-utils, stterm, curl
 
+# Customize DESTDIR and PREFIX
+DEB_MAKE_EXTRA_ARGS += DESTDIR=$(CURDIR)/debian/surf PREFIX=/usr
+
+# Install target
+DEB_MAKE_INSTALL_TARGET = install
+
+# clean target hook
 clean::
 	rm -rf config.h
 
