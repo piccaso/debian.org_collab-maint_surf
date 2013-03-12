@@ -1,21 +1,51 @@
-Description: Changes to introducing dpkg-buildflags
- This patch assists in introducing dpkg-buildflags in the rules
- file.
+Description: Fixes to introduce build hardening
+ This patch modifies the upstream source to introduce build
+ hardening. Additionally it fixes upstream source to work properly
+ with CDBS build system.
 Author: Vasudev Kamath <kamathvasudev@gmail.com>
-Last-Updated: 2012-02-16
+Last-Updated: 2012-03-12
 Forwaded: not-needed
 --- a/config.mk
 +++ b/config.mk
-@@ -18,9 +18,9 @@ INCS = -I. -I/usr/include -I${X11INC} ${
+@@ -10,17 +10,16 @@ MANPREFIX = ${PREFIX}/share/man
+ X11INC = /usr/X11R6/include
+ X11LIB = /usr/X11R6/lib
+ 
+-GTKINC = `pkg-config --cflags gtk+-2.0 webkit-1.0`
+-GTKLIB = `pkg-config --libs gtk+-2.0 webkit-1.0`
++GTKINC = $(shell pkg-config --cflags gtk+-2.0 webkit-1.0)
++GTKLIB = $(shell pkg-config --libs gtk+-2.0 webkit-1.0)
+ 
+ # includes and libs
+ INCS = -I. -I/usr/include -I${X11INC} ${GTKINC}
  LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 ${GTKLIB} -lgthread-2.0
  
  # flags
 -CPPFLAGS = -DVERSION=\"${VERSION}\" -D_BSD_SOURCE
 -CFLAGS = -std=c99 -pedantic -Wall -Os ${INCS} ${CPPFLAGS}
 -LDFLAGS = -g ${LIBS}
-+CPPFLAGS += -DVERSION=\"${VERSION}\" -D_BSD_SOURCE
-+CFLAGS += -std=c99 -pedantic -Wall -Os ${INCS} ${CPPFLAGS}
-+LDFLAGS += -g ${LIBS}
++SCPPFLAGS += -DVERSION=\"${VERSION}\" -D_BSD_SOURCE
++SCFLAGS += -std=c99
  
  # Solaris
  #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
+--- a/Makefile
++++ b/Makefile
+@@ -16,7 +16,7 @@ options:
+ 
+ .c.o:
+ 	@echo CC $<
+-	${CC} -c ${CFLAGS} $<
++	${CC} -c ${SCFLAGS} ${SCPPFLAGS} ${CFLAGS} ${INCS} $<
+ 
+ ${OBJ}: config.h config.mk
+ 
+@@ -26,7 +26,7 @@ config.h:
+ 
+ surf: ${OBJ}
+ 	@echo CC -o $@
+-	${CC} -o $@ surf.o ${LDFLAGS}
++	${CC} -o $@ surf.o ${LDFLAGS} ${LIBS}
+ 
+ clean:
+ 	@echo cleaning
