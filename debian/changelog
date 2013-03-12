@@ -2,18 +2,27 @@ surf (0.6-1) UNRELEASED; urgency=low
 
   * Imported new upstream release 0.6.
   * Introduced debian/control.in
-    + Moved build-depends to rules file
-    + Moved depends to rules file and removed x-terminal-emulator and wget
-      from depends, upstream now uses curl and stterm which is now
-      introduced as Depends.
-    + Bumped Standards-Version to 3.9.4 (no changes needed).
-    + Removed ;a=summary from the URL in Vcs-Browser field.
-    + Improved short description of package.
+     + Moved build-depends to rules file
+     + Moved depends to rules file and removed x-terminal-emulator and wget
+       from depends, upstream now uses curl and stterm which is now
+       introduced as Depends.
+     + Bumped Standards-Version to 3.9.4 (no changes needed).
+     + Removed ;a=summary from the URL in Vcs-Browser field.
+     + Improved short description of package.
   * Converted to CDBS packaging.
   * Updated copyright holders for upstream source.
   * Introduced debian/copyright_hints.
+  * Renamed patches to follow micro guidelines described in
+    debian/patches/README.
+     + transparent_makefile.patch is now 2001_transparent_makefile.patch
+     + dpkg-buildflags.patch is now 2002_hardening_portability_fix.patch
+     + replace_xterm_with_x-terminal-emulator.patch is now
+       2003_replace_st_with_stterm.patch
+  * Replaced x-terminal-emulator with stterm as upstream switched from
+    xterm to st in 2003_replace_st_with_stterm.patch.
+  * Updated the copyright year on debian folder for me to 2012-2013.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 10 Mar 2013 16:58:37 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 12 Mar 2013 22:14:22 +0530
 
 surf (0.5-1) experimental; urgency=low
 
