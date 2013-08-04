@@ -1,4 +1,4 @@
-surf (0.6-1) UNRELEASED; urgency=low
+surf (0.6-1) unstable; urgency=low
 
   * Imported new upstream release 0.6.
   * Introduced debian/control.in
@@ -21,8 +21,9 @@ surf (0.6-1) UNRELEASED; urgency=low
   * Replaced x-terminal-emulator with stterm as upstream switched from
     xterm to st in 2003_replace_st_with_stterm.patch.
   * Updated the copyright year on debian folder for me to 2012-2013.
+  * Upload to unstable.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Tue, 12 Mar 2013 22:14:22 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 04 Aug 2013 14:36:54 +0530
 
 surf (0.5-1) experimental; urgency=low
 
