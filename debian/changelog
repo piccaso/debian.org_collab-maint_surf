@@ -1,7 +1,8 @@
 surf (0.6-1) unstable; urgency=low
 
   * Imported new upstream release 0.6.
-  * Introduced debian/control.in
+    Closes: bug#611118,#611872,#611294, Thanks to Jonathan Neider.
+  * Converted to CDBS packaging.
      + Moved build-depends to rules file
      + Moved depends to rules file and removed x-terminal-emulator and wget
        from depends, upstream now uses curl and stterm which is now
@@ -9,18 +10,16 @@ surf (0.6-1) unstable; urgency=low
      + Bumped Standards-Version to 3.9.4 (no changes needed).
      + Removed ;a=summary from the URL in Vcs-Browser field.
      + Improved short description of package.
-  * Converted to CDBS packaging.
   * Updated copyright holders for upstream source.
   * Introduced debian/copyright_hints.
   * Renamed patches to follow micro guidelines described in
     debian/patches/README.
-     + transparent_makefile.patch is now 2001_transparent_makefile.patch
-     + dpkg-buildflags.patch is now 2002_hardening_portability_fix.patch
-     + replace_xterm_with_x-terminal-emulator.patch is now
-       2003_replace_st_with_stterm.patch
   * Replaced x-terminal-emulator with stterm as upstream switched from
     xterm to st in 2003_replace_st_with_stterm.patch.
+  * Update 2002_hardening_portability_fix.patch to include CPPFLAGS in
+    upstream compilation rules.
   * Updated the copyright year on debian folder for me to 2012-2013.
+  * Bump Standards-Version to 3.9.5.
   * Upload to unstable.
 
  -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 04 Aug 2013 14:36:54 +0530
