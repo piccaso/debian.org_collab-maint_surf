@@ -2,7 +2,7 @@ Source: surf
 Section: web
 Priority: optional
 Build-Depends: @cdbs@
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Maintainer: Vasudev Kamath <kamathvasudev@gmail.com>
 Homepage: http://surf.suckless.org
 Vcs-Git: git://anonscm.debian.org/collab-maint/surf.git
