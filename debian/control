@@ -8,7 +8,7 @@ Build-Depends: cdbs,
  libgtk2.0-dev,
  libwebkitgtk-dev,
  pkg-config
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Maintainer: Vasudev Kamath <kamathvasudev@gmail.com>
 Homepage: http://surf.suckless.org
 Vcs-Git: git://anonscm.debian.org/collab-maint/surf.git
