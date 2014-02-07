@@ -1,5 +1,6 @@
 surf (0.6-1) unstable; urgency=low
 
+  [ Vasudev Kamath ]
   * Imported new upstream release 0.6.
     Closes: bug#611118,#611872,#611294, Thanks to Jonathan Neider.
   * Converted to CDBS packaging.
@@ -22,7 +23,7 @@ surf (0.6-1) unstable; urgency=low
   * Bump Standards-Version to 3.9.5.
   * Upload to unstable.
 
- -- Vasudev Kamath <kamathvasudev@gmail.com>  Sun, 04 Aug 2013 14:36:54 +0530
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Wed, 05 Feb 2014 15:19:07 +0530
 
 surf (0.5-1) experimental; urgency=low
 
