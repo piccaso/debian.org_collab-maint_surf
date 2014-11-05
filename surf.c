@@ -582,6 +582,19 @@ linkhover(WebKitWebView *v, const char* t, const char* l, Client *c) {
 	update(c);
 }
 
+static gboolean
+loaderror(WebKitWebView  *web_view, WebKitWebFrame *web_frame, gchar *uri, GError *web_error, Client *c){
+  printf("load-error\n");
+  webkit_web_view_stop_loading(web_view);
+  //webkit_web_view_load_uri(web_view, "http://localhost/?load-error");
+  webkit_web_view_load_string(
+    web_view,
+    "<html><head><style>*{color:#fff;}</style></head><body onload='location=\"http://localhost/?load-error\"'>load-error</body></html>",
+    "text/html","utf-8","file:///"
+  );
+  return TRUE;
+}
+
 static void
 loadstatuschange(WebKitWebView *view, GParamSpec *pspec, Client *c) {
 	WebKitWebFrame *frame;
@@ -680,6 +693,11 @@ newclient(void) {
 		 */
 		gtk_window_set_role(GTK_WINDOW(c->win), "Surf");
 	}
+	//Set background colour
+	GdkColor bgcol;
+	gdk_color_parse("#000", &bgcol);
+	gtk_widget_modify_bg(c->win, GTK_STATE_NORMAL, &bgcol);
+
 	gtk_window_set_default_size(GTK_WINDOW(c->win), 800, 600);
 	g_signal_connect(G_OBJECT(c->win),
 			"destroy",
@@ -697,11 +715,13 @@ newclient(void) {
 
 	/* Scrolled Window */
 	c->scroll = gtk_scrolled_window_new(NULL, NULL);
+	gtk_widget_modify_bg(c->scroll, GTK_STATE_NORMAL, &bgcol); /* apply bg col to scrolled win */
 	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(c->scroll),
 			GTK_POLICY_NEVER, GTK_POLICY_NEVER);
 
 	/* Webview */
 	c->view = WEBKIT_WEB_VIEW(webkit_web_view_new());
+	webkit_web_view_set_transparent(c->view, TRUE); /* transparent bg */
 	g_signal_connect(G_OBJECT(c->view),
 			"title-changed",
 			G_CALLBACK(titlechange), c);
@@ -723,6 +743,9 @@ newclient(void) {
 	g_signal_connect(G_OBJECT(c->view),
 			"notify::load-status",
 			G_CALLBACK(loadstatuschange), c);
+	g_signal_connect(G_OBJECT(c->view),
+			/*notify::*/"load-error",
+			G_CALLBACK(loaderror), c);
 	g_signal_connect(G_OBJECT(c->view),
 			"notify::progress",
 			G_CALLBACK(progresschange), c);
