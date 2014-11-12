@@ -1,0 +1,13 @@
+language: c
+compiler:
+  - clang
+  - gcc
+before_script:
+  - lsb_release -a
+  - uname -a
+  - env
+  - sudo apt-get -qq -y install devscripts build-essential fakeroot cdbs dh-buildinfo
+  - sudo apt-get -qq -y build-dep surf
+script: make
+notifications:
+  email: false
