@@ -6,8 +6,8 @@ before_script:
   - lsb_release -a
   - uname -a
   - env
-  - sudo apt-get -qq -y install devscripts build-essential fakeroot cdbs dh-buildinfo
-  - sudo apt-get -qq -y build-dep surf
+  - sudo apt-get --no-install-recommends -qq -y build-dep surf
+  - echo "CC = $CC" >> config.mk
 script: make
 notifications:
   email: false
